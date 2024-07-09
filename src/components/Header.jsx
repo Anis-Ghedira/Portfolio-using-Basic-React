@@ -1,9 +1,9 @@
-import { Adj } from "./data";
+import { adj } from "./data";
 
 function getRandomNumber(number) {
   return Math.floor(Math.random() * (number + 1));
 }
-const adjective = Adj[getRandomNumber(2)];
+const adjective = adj[getRandomNumber(2)];
 
 export function Header() {
   return (
