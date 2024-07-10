@@ -5,6 +5,8 @@ import { Button } from "./components/Button.jsx";
 import { infoTab } from "./data.js";
 import { Pourcent } from "./components/Pourcent.jsx";
 import { skills } from "./data.js";
+import { Work } from "./components/Work.jsx";
+import { work } from "./data.js";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -43,6 +45,9 @@ function App() {
         </section>
         <section id="work">
           <h2>Work Experience</h2>
+          {work.map((item) => (
+            <Work {...item} />
+          ))}
         </section>
         <section id="contact-us">
           <h2>Contact Us</h2>

@@ -1,0 +1,19 @@
+export function Work({ image, title, description, date, location }) {
+  return (
+    <div className="work">
+      <img src={image} alt="" />
+      <div>
+        <h3>{title}</h3>
+        <div className="dflex">
+          <i class="fa-regular fa-calendar-days px-1"></i>
+          <p>{date} </p>
+        </div>
+        <div className="dflex">
+          <i class="fa-solid fa-location-dot px-1"></i>
+          <p>{location}</p>
+        </div>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
