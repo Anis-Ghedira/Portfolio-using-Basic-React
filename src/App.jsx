@@ -1,30 +1,57 @@
+import { useState } from "react";
 import { Header } from "./components/Header.jsx";
 import { Info } from "./components/Info.jsx";
-import { infoTab } from "./components/data.js";
+import { Button } from "./components/Button.jsx";
+import { infoTab } from "./data.js";
+import { Pourcent } from "./components/Pourcent.jsx";
+import { skills } from "./data.js";
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState();
+
+  function clickHandler(selectedButton) {
+    setSelectedTopic(selectedButton);
+  }
+
   return (
     <div>
       <Header />
       <main>
+        <section id="details">
+          <h2>Skills</h2>
+          <menu>
+            <Button
+              isSelected={selectedTopic === "developer"}
+              click={() => clickHandler("developer")}
+            >
+              Developer Tools
+            </Button>
+            <Button
+              isSelected={selectedTopic === "civil"}
+              click={() => clickHandler("civil")}
+            >
+              Civil Tools
+            </Button>
+          </menu>
+          {!selectedTopic ? null : (
+            <div>
+              {skills[selectedTopic].map((item) => (
+                <Pourcent {...item} />
+              ))}
+            </div>
+          )}
+        </section>
+        <section id="work">
+          <h2>Work Experience</h2>
+        </section>
         <section id="contact-us">
           <h2>Contact Us</h2>
           <ul>
-            <Info {...infoTab[0]}></Info>
-            <Info {...infoTab[1]}></Info>
-            <Info {...infoTab[2]}></Info>
-            <Info {...infoTab[3]}></Info>
+            {infoTab.map((item) => (
+              <Info {...item} />
+            ))}
           </ul>
         </section>
-        {/* <section id="examples">
-          <h2>Examples</h2>
-          <menu>
-            <TabButton>anis</TabButton>
-            <TabButton>ahmed</TabButton>
-            <TabButton>joud</TabButton>
-            <TabButton>ons</TabButton>
-          </menu>
-        </section> */}
       </main>
     </div>
   );
