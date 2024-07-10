@@ -269,7 +269,6 @@ main h2 {
 #formation {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   gap: 1rem;
   flex-wrap: wrap;
 }
