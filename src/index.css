@@ -83,42 +83,6 @@ main h2 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-/* Contact Us */
-#contact-us ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 5rem;
-  display: flex;
-  gap: 10rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#contact-us li {
-  width: 10rem;
-  text-align: center;
-  white-space: nowrap;
-}
-
-#contact-us li:hover {
-  scale: 1.05;
-  transition: scale 0.3s;
-}
-
-#contact-us li img {
-  height: 4rem;
-  width: 4rem;
-  object-fit: cover;
-}
-
-#contact-us li h3 {
-  margin: 0.5rem 0;
-}
-
-#contact-us li p {
-  font-size: 0.9rem;
-}
-
 /* details */
 #details {
   margin: 3rem auto;
@@ -157,6 +121,19 @@ main h2 {
   background-color: white;
   color: black;
   border: 1px solid black;
+}
+
+#details .anime {
+  text-align: center;
+  color: #027b8d;
+  font-size: 1rem;
+  animation: anime 0.5s infinite;
+}
+
+@keyframes anime {
+  to {
+    scale: 1.05;
+  }
 }
 
 /* pourcent */
@@ -263,7 +240,7 @@ main h2 {
   background-color: #ffffff;
   color: #000000;
   padding-bottom: 2rem;
-  width: 70%;
+  width: 60%;
   margin: 2rem auto;
   overflow: hidden;
   border-radius: 15px;
@@ -273,13 +250,94 @@ main h2 {
   padding: 2rem;
 }
 
+.work li {
+  text-align: start;
+}
+
 .work i {
   font-size: 1.5rem;
 }
 
-.work .dflex {
+.dflex {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* formation */
+#formation {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.formation {
+  min-width: 20%;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid var(--bg-color);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.formation:hover {
+  scale: 1.05;
+  transition: scale 0.5s;
+}
+
+.formation img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.formation p {
+  margin: 0;
+}
+
+/* Contact Us */
+#contact-us {
+  background-color: var(--bg-color);
+  color: #ffffff;
+}
+
+#contact-us h2 {
+  margin-bottom: 0;
+}
+
+#contact-us ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+  display: flex;
+  gap: 10rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#contact-us li {
+  width: 10rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#contact-us i:hover {
+  scale: 1.2;
+  transition: scale 0.3s;
+}
+
+#contact-us i {
+  font-size: 3rem;
+}
+
+#contact-us li h3 {
+  margin: 0.5rem 0;
+}
+
+#contact-us li p {
+  font-size: 0.9rem;
 }

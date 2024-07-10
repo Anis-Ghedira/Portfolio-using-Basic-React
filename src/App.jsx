@@ -7,6 +7,8 @@ import { Pourcent } from "./components/Pourcent.jsx";
 import { skills } from "./data.js";
 import { Work } from "./components/Work.jsx";
 import { work } from "./data.js";
+import { Formation } from "./components/Formation.jsx";
+import { formation } from "./data.js";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -35,7 +37,9 @@ function App() {
               Civil Tools
             </Button>
           </menu>
-          {!selectedTopic ? null : (
+          {!selectedTopic ? (
+            <p className="anime">Please click a button</p>
+          ) : (
             <div>
               {skills[selectedTopic].map((item) => (
                 <Pourcent {...item} />
@@ -49,6 +53,16 @@ function App() {
             <Work {...item} />
           ))}
         </section>
+
+        <section>
+          <h2>Formation</h2>
+          <div id="formation">
+            {formation.map((item) => (
+              <Formation {...item} />
+            ))}
+          </div>
+        </section>
+
         <section id="contact-us">
           <h2>Contact Us</h2>
           <ul>
