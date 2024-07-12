@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="details">
@@ -40,11 +40,11 @@ function App() {
           {!selectedTopic ? (
             <p className="anime">Please click a button</p>
           ) : (
-            <div>
+            <>
               {skills[selectedTopic].map((item) => (
                 <Pourcent {...item} />
               ))}
-            </div>
+            </>
           )}
         </section>
         <section id="work">
@@ -72,7 +72,7 @@ function App() {
           </ul>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 

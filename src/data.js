@@ -151,7 +151,7 @@ export const formation = [
     location: "Home, Monastir.",
   },
   {
-    image: "src/assets/Images/images.jpeg",
+    image: "src/assets/Images/13.jpeg",
     title: "Petrol Engineer",
     date: "September 2015 - June 2016",
     location: "Oil ans Gas Institute of Monastir.",
