@@ -1,7 +1,7 @@
 import { Header } from "./components/Header.jsx";
 import { Skills } from "./components/Skills.jsx";
 import { Works } from "./components/Works.jsx";
-import { Formation } from "./components/Formations.jsx";
+import { Formations } from "./components/Formations.jsx";
 import { Infos } from "./components/Infos.jsx";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <main>
         <Skills />
         <Works />
-        <Formation />
+        <Formations />
         <Infos />
       </main>
     </>
